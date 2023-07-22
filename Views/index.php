@@ -6,10 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="design/style.css">
 </head>
 <body>
-	<?php require_once 'Views/entete.php'; ?>
+	<?php require_once 'inc/entete.php'; ?>
 	<div id="contenu">
 		<?php
-			require_once 'Models/fonctions.php';
+			require_once 'inc/fonctions.php';
 			if (($bdd = dbConnect()) != null)
 			{
 				$articles = getList($bdd);
@@ -29,7 +29,7 @@
 	</div>
 	<?php 
 		$categories = getList($bdd, 'Categorie');
-		require_once 'Views/menu.php'; 
+		require_once 'inc/menu.php'; 
 	?>
 </body>
 </html>

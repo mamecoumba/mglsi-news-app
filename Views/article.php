@@ -8,8 +8,8 @@
 <body>
 	<div id="contenu">
 	<?php 
-		require_once 'inc/entete.php';
-		require_once 'inc/fonctions.php';
+		require_once 'entete.php';
+		require_once 'Models/fonctions.php';
 		$bdd = dbConnect();
 		if (isset($_GET['id']))
 		{
@@ -51,7 +51,7 @@
 	</div>
 	<?php 
 		$categories = getList($bdd, 'Categorie');
-		require_once 'inc/menu.php'; 
+		require_once 'menu.php'; 
 	?>
 </body>
 </html>
