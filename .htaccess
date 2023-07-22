@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteRule ^article/([0-9]+)$ article.php?id=$1 [L]
+RewriteRule ^categorie/([0-9]+)$ article.php?categorie=$1 [L]
+RewriteRule ^assets/(.*)$ assets/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
